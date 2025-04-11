@@ -9,15 +9,12 @@
     {{-- mt-auto will force this to be at the bottom in cases where there's some more margin to be had --}}
     <div class="flex justify-between items-center mt-auto">
         <div>
-            {{-- Tip: transition-colors and duration-300 for a smoother transition --}}
-            <a href="#"
-                class="bg-white/10 hover:bg-white/25 px-2 py-1 rounded-xl text-xs transition-colors duration-300">Tag</a>
-            <a href="#"
-                class="bg-white/10 hover:bg-white/25 px-2 py-1 rounded-xl text-xs transition-colors duration-300">Tag</a>
-            <a href="#"
-                class="bg-white/10 hover:bg-white/25 px-2 py-1 rounded-xl text-xs transition-colors duration-300">Tag</a>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
         </div>
 
+        {{-- can use placeholder images from here, 42/42 is the dimensions --}}
         <img src="http://place-hold.it/42/42" alt="" class="rounded-xl">
     </div>
 </div>
