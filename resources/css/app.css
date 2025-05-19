@@ -12,5 +12,8 @@
 
     --font-hanken-grotesk: "Hanken Grotesk", "sans-serif";
 
+    /* 10px */
+    --text-2xs: 0.625rem;
+
     --color-black: #060606;
 }
