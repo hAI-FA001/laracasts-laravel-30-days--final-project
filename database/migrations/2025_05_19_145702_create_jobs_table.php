@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Employer;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,6 +14,13 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Employer::class);
+            $table->string('title');
+            $table->string('salary');
+            $table->string('location');
+            $table->string('schedule')->default('Full Time');
+            $table->string('url');  // redirect to your company's page for job details
+            $table->boolean('featured')->default(false);  // e.g. pay more to have your job featured
             $table->timestamps();
         });
     }
