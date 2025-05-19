@@ -9,9 +9,9 @@
     {{-- mt-auto will force this to be at the bottom in cases where there's some more margin to be had --}}
     <div class="flex justify-between items-center mt-auto">
         <div>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
+            <x-tag size="small">Backend</x-tag>
+            <x-tag size="small">Frontend</x-tag>
+            <x-tag size="small">Manager</x-tag>
         </div>
 
         {{-- can use placeholder images from here, 42/42 is the dimensions --}}
