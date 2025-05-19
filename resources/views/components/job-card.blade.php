@@ -15,6 +15,7 @@
         </div>
 
         {{-- can use placeholder images from here, 42/42 is the dimensions --}}
-        <img src="http://place-hold.it/42/42" alt="" class="rounded-xl">
+        {{-- <img src="http://place-hold.it/42/42" alt="" class="rounded-xl"> --}}
+        <x-employer-logo :width='42' />
     </div>
 </div>
