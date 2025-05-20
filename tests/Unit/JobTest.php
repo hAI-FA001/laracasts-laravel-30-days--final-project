@@ -16,3 +16,16 @@ test('it belongs to employer', function () {
     // TDD: we would need to add the relation/function in models if we didn't cuz the test would fail then
     expect($job->employer->is($employer))->toBeTrue();
 });
+
+it('can have tags', function(){
+    // AAA
+
+    // 
+    $job = Job::factory()->create();
+
+    // 
+    $job->tag('Frontend');
+
+    // 
+    expect($job->tags)->toHaveCount(1);
+});
