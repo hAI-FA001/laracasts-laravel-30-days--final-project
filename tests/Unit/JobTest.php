@@ -11,6 +11,6 @@ class JobTest extends TestCase
      */
     public function test_example(): void
     {
-        $this->assertTrue(true);
+        $this->assertFalse(true);
     }
 }
