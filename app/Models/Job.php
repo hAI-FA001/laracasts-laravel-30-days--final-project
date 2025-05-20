@@ -15,11 +15,13 @@ class Job extends Model
         return $this->belongsTo(Employer::class);
     }
 
-    public function tag($tag) {
-
+    public function tag(string $name) {
+        $tag = Tag::firstOrCreate(['name' => $name]);
+        $this->tags()->attach($tag);
+        // at this point, test tells u what to do next: add [name] to fillable
     }
 
     public function tags() {
-        return [];
+        return $this->belongsToMany(Tag::class);
     }
 }
