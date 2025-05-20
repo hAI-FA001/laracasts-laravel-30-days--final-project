@@ -1,3 +1,5 @@
+@props(['job'])
+
 <x-panel class="flex flex-col text-center">
     <div class="self-start text-sm">Laracasts</div>
 
@@ -9,9 +11,9 @@
     {{-- mt-auto will force this to be at the bottom in cases where there's some more margin to be had --}}
     <div class="flex justify-between items-center mt-auto">
         <div>
-            <x-tag size="small">Backend</x-tag>
-            <x-tag size="small">Frontend</x-tag>
-            <x-tag size="small">Manager</x-tag>
+            @foreach ($job->tags as $tag)
+                <x-tag size="small" :$tag />
+            @endforeach
         </div>
 
         {{-- can use placeholder images from here, 42/42 is the dimensions --}}

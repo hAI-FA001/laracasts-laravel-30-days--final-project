@@ -1,3 +1,5 @@
+@props(['job'])
+
 <x-panel class="flex gap-x-6">
 
     {{-- wrap img in a div, direct children of flex gave gigantic images --}}
@@ -13,8 +15,8 @@
     </div>
 
     <div>
-        <x-tag>Tag</x-tag>
-        <x-tag>Tag</x-tag>
-        <x-tag>Tag</x-tag>
+        @foreach ($job->tags as $tag)
+            <x-tag :$tag />
+        @endforeach
     </div>
 </x-panel>
