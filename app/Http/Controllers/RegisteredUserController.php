@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
         // configure in config/filesystems.php, includes options like local storage, S3, FTP etc
         // change FILESYSTEM_DISK env var to public, which will store it under storage/app/public and make a symbolic link in public/
         $logoPath = $request->logo->store('logos');
-        $user->employer->create([
+        $user->employer()->create([
             'name' => $employerAttrs['employer'],
             'logo' => $logoPath,
         ]);
