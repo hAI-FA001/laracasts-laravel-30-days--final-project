@@ -4,7 +4,7 @@
 
     {{-- wrap img in a div, direct children of flex gave gigantic images --}}
     <div>
-        <x-employer-logo />
+        <x-employer-logo :employer='$job->employer' />
     </div>
 
     <div class='flex-1 flex flex-col'>

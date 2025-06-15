@@ -22,6 +22,6 @@
 
         {{-- can use placeholder images from here, 42/42 is the dimensions --}}
         {{-- <img src="http://place-hold.it/42/42" alt="" class="rounded-xl"> --}}
-        <x-employer-logo :width='42' />
+        <x-employer-logo :employer='$job->employer' :width='42' />
     </div>
 </x-panel>
