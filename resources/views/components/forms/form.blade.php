@@ -2,7 +2,6 @@
     @if ($attributes->get('method', 'GET') !== 'GET')
         @csrf
         @method($attributes->get('method'))
-
-        {{ $slot }}
     @endif
+    {{ $slot }}
 </form>
